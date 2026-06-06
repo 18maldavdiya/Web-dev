@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background: #fff;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.logo {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 15px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.sidebar ul li i {
+    margin-right: 12px;
+}
+
+.sidebar hr {
+    margin: 20px 0;
+    border: 1px solid #eee;
+}
+
+
+/* Content */
+
+.content {
+    margin-left: 260px;
+    width: 100%;
+    padding: 20px 60px;
+}
+
+
+/* Topbar */
+
+.topbar {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    width: 300px;
+    background: #f3f3f3;
+    padding: 12px 15px;
+    border-radius: 30px;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    margin-left: 10px;
+}
+
+
+/* Tabs */
+
+.tabs {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabs span {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.tabs .active {
+    border-bottom: 2px solid black;
+}
+
+
+/* Articles */
+
+.article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.article-text {
+    width: 70%;
+}
+
+.author {
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.article h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.article p {
+    color: #555;
+}
+
+.article img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+}
