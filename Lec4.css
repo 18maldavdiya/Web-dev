@@ -131,4 +131,4 @@ body {
     width: 180px;
     height: 120px;
     object-fit: cover;
-}
+    border-radius: 10px;
