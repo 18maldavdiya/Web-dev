@@ -1,0 +1,11 @@
+#flax {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
