@@ -1,61 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medium Clone</title>
-    <link rel="stylesheet" href="Lec4.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+ <link rel="stylesheet" href="Lec4.css">
 </head>
-
 <body>
+    <header class="header">
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <h1>≡Medium</h1>
+        <div class="left-header">
+            <i class="fa-solid fa-bars menu"></i>
 
-        <ul>
-            <li><i class="fa-solid fa-house"></i> Home</li>
-            <li><i class="fa-regular fa-bookmark"></i> Library</li>
-            <li><i class="fa-regular fa-user"></i> Profile</li>
-            <li><i class="fa-regular fa-file-lines"></i> Stories</li>
-            <li><i class="fa-solid fa-chart-column"></i> Stats</li>
-        </ul>
+            <h1 class="logo">Medium</h1>
 
-        <hr>
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
 
-        <ul>
-            <li><i class="fa-solid fa-users"></i> Following</li>
-            <li><i class="fa-solid fa-plus"></i> Find writers</li>
-        </ul>
-    </aside>
+        <div class="right-header">
+            <button class="app-btn">Get app</button>
 
+            <i class="fa-regular fa-pen-to-square"></i>
+            <span>Write</span>
+
+            <i class="fa-regular fa-bell"></i>
+            <p>🛖</p>
+        </div>
+
+    </header>
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </li>
+
+                <li>
+                    <i class="fa-regular fa-bookmark"></i>
+                    <span>Library</span>
+                </li>
+
+                <li>
+                    <i class="fa-regular fa-user"></i>
+                    <span>Profile</span>
+                </li>
+
+                <li>
+                    <i class="fa-regular fa-file-lines"></i>
+                    <span>Stories</span>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-chart-column"></i>
+                    <span>Stats</span>
+                </li>
+
+            </ul>
+
+            <hr>
+
+            <h3>Following</h3>
+
+            <div class="follow-box">
+                <i class="fa-solid fa-plus"></i>
+
+                <p>
+                    Find writers and publications to follow.
+                </p>
+
+                <a href="#">See suggestions</a>
+            </div>
+
+        </aside>
+
+    </div>
 
     <main class="content">
 
+    <div class="tabs">
+        <span class="active">For you</span>
+        <span>Featured</span>
+    </div>
 
-        <header class="header">
-            <input type="text" placeholder="Search">
-            <button class="write-btn"><i class="fa-solid fa-pen-to-square"></i> Write</button>
-        </header>
-        <div class="article">
-            <div class="article-content">
-                <div class="author">Data Science Collective • Feb 23</div>
-                <div class="title">Should You Still Learn to Code in 2026?</div>
-                <div class="desc">The answer isn't as obvious as it used to be.</div>
-                <div class="stats">⭐ 3.5K 💬176 🔁 78 &nbsp; &nbsp; &nbsp;
-                    <span>ada</span>
-                </div>
+    <!-- Article 1 -->
+    <div class="article">
+
+        <div class="article-info">
+            <p>Leo Godin · Mar 2</p>
+
+            <h2>Claude Code is Great</h2>
+
+            <h4>You Just Need to Learn How to Use It</h4>
+
+            <div class="article-stats">
+                <span>⭐ 5.2K</span>
+                <span>💬 150</span>
+                <span>🔁 87</span>
             </div>
-
-            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600" alt="">
         </div>
 
+        <img src="https://picsum.photos/200/120?1" alt="">
+    </div>
 
+    <!-- Article 2 -->
+    <div class="article">
 
+        <div class="article-info">
+            <p>Data Science Collective · Feb 23</p>
 
+            <h2>Should You Still Learn to Code in 2026?</h2>
+
+            <h4>The answer isn't as obvious as it used to be.</h4>
+
+            <div class="article-stats">
+                <span>⭐ 3.6K</span>
+                <span>💬 178</span>
+                <span>🔁 94</span>
+            </div>
+        </div>
+
+        <img src="https://picsum.photos/200/120?2" alt="">
+    </div>
+
+    <!-- Article 3 -->
+    <div class="article">
+
+        <div class="article-info">
+            <p>Books Are Our Superpower · Mar 9</p>
+
+            <h2>Women Are Basically Reading Porn</h2>
+
+            <h4>Comments I receive when I say I'm a fiction reader.</h4>
+
+            <div class="article-stats">
+                <span>⭐ 6K</span>
+                <span>💬 305</span>
+                <span>🔁 167</span>
+            </div>
+        </div>
+
+        <img src="https://picsum.photos/200/120?3" alt="">
+    </div>
+
+</main>
+    
 
 </body>
-
 </html>
