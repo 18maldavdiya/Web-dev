@@ -2,70 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medium Clone</title>
-
-    <!-- Font Awesome -->
+    <link rel="stylesheet" href="Lec4.css">
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
- <link rel="stylesheet" href="Lec4.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header class="header">
 
-        <div class="left-header">
-            <i class="fa-solid fa-bars menu"></i>
-
-            <h1 class="logo">Medium</h1>
-
-            <div class="search-box">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search">
-            </div>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-bars"></i>
+            <h1>Medium</h1>
         </div>
 
-        <div class="right-header">
-            <button class="app-btn">Get app</button>
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search">
+        </div>
 
-            <i class="fa-regular fa-pen-to-square"></i>
-            <span>Write</span>
-
+        <div class="header-right">
+            <button class="btn">Get app</button>
+            <a href="#">Write</a>
             <i class="fa-regular fa-bell"></i>
             <p>🛖</p>
         </div>
-
     </header>
+
+    <!-- Main Layout -->
     <div class="container">
 
+        <!-- Sidebar -->
         <aside class="sidebar">
 
             <ul>
-
-                <li>
-                    <i class="fa-solid fa-house"></i>
-                    <span>Home</span>
-                </li>
-
-                <li>
-                    <i class="fa-regular fa-bookmark"></i>
-                    <span>Library</span>
-                </li>
-
-                <li>
-                    <i class="fa-regular fa-user"></i>
-                    <span>Profile</span>
-                </li>
-
-                <li>
-                    <i class="fa-regular fa-file-lines"></i>
-                    <span>Stories</span>
-                </li>
-
-                <li>
-                    <i class="fa-solid fa-chart-column"></i>
-                    <span>Stats</span>
-                </li>
-
+                <li><i class="fa-solid fa-house"></i> Home</li>
+                <li><i class="fa-regular fa-bookmark"></i> Library</li>
+                <li><i class="fa-regular fa-user"></i> Profile</li>
+                <li><i class="fa-regular fa-file-lines"></i> Stories</li>
+                <li><i class="fa-solid fa-chart-simple"></i> Stats</li>
             </ul>
 
             <hr>
@@ -74,87 +49,111 @@
 
             <div class="follow-box">
                 <i class="fa-solid fa-plus"></i>
-
-                <p>
-                    Find writers and publications to follow.
-                </p>
-
+                <p>Find writers and publications to follow.</p>
                 <a href="#">See suggestions</a>
             </div>
 
         </aside>
 
-    </div>
+        <!-- Content -->
+        <main class="content">
 
-    <main class="content">
-
-    <div class="tabs">
-        <span class="active">For you</span>
-        <span>Featured</span>
-    </div>
-
-    <!-- Article 1 -->
-    <div class="article">
-
-        <div class="article-info">
-            <p>Leo Godin · Mar 2</p>
-
-            <h2>Claude Code is Great</h2>
-
-            <h4>You Just Need to Learn How to Use It</h4>
-
-            <div class="article-stats">
-                <span>⭐ 5.2K</span>
-                <span>💬 150</span>
-                <span>🔁 87</span>
+            <div class="tabs">
+                <span class="active">For you</span>
+                <span>Featured</span>
             </div>
-        </div>
 
-        <img src="https://picsum.photos/200/120?1" alt="">
-    </div>
+            <!-- Article -->
+            <div class="post">
 
-    <!-- Article 2 -->
-    <div class="article">
+                <div class="post-text">
+                    <p>Leo Godin • Mar 2</p>
 
-        <div class="article-info">
-            <p>Data Science Collective · Feb 23</p>
+                    <h2>Claude Code is Great</h2>
 
-            <h2>Should You Still Learn to Code in 2026?</h2>
+                    <h4>You Just Need to Learn How to Use It</h4>
 
-            <h4>The answer isn't as obvious as it used to be.</h4>
+                    <div class="stats">
+                        ⭐ 5.2K &nbsp; 💬 150 &nbsp; 🔁 87
+                    </div>
+                </div>
 
-            <div class="article-stats">
-                <span>⭐ 3.6K</span>
-                <span>💬 178</span>
-                <span>🔁 94</span>
+                <img src="https://picsum.photos/250/150?1">
             </div>
-        </div>
 
-        <img src="https://picsum.photos/200/120?2" alt="">
-    </div>
+            <!-- Article -->
+            <div class="post">
 
-    <!-- Article 3 -->
-    <div class="article">
+                <div class="post-text">
+                    <p>Data Science Collective • Feb 23</p>
 
-        <div class="article-info">
-            <p>Books Are Our Superpower · Mar 9</p>
+                    <h2>Should You Still Learn to Code in 2026?</h2>
 
-            <h2>Women Are Basically Reading Porn</h2>
+                    <h4>The answer isn't as obvious as it used to believe.</h4>
 
-            <h4>Comments I receive when I say I'm a fiction reader.</h4>
+                    <div class="stats">
+                        ⭐ 3.6K &nbsp; 💬 178 &nbsp; 🔁 94
+                    </div>
+                </div>
 
-            <div class="article-stats">
-                <span>⭐ 6K</span>
-                <span>💬 305</span>
-                <span>🔁 167</span>
+                <img src="https://picsum.photos/250/150?2">
             </div>
-        </div>
 
-        <img src="https://picsum.photos/200/120?3" alt="">
+            <!-- Article -->
+            <div class="post">
+
+                <div class="post-text">
+                    <p>Books Are Our Superpower • Mar 9</p>
+
+                    <h2>“Women Are reading good books ”</h2>
+
+                    <h4>Comments I receive when I say I'm a fiction reader.</h4>
+
+                    <div class="stats">
+                        ⭐ 6K &nbsp; 💬 305 &nbsp; 🔁 167
+                    </div>
+                </div>
+
+                <img src="https://picsum.photos/250/150?3">
+            </div>
+
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="rightbar">
+
+            <h2>Staff Picks</h2>
+
+            <div class="staff">
+                <p>devin bambrick</p>
+                <h4>Gatori Fishing in America</h4>
+            </div>
+
+            <div class="staff">
+                <p>John DeVore</p>
+                <h4>Cigarettes are bad. I miss them.</h4>
+            </div>
+
+            <div class="staff">
+                <p>Divya Sabade</p>
+                <h4>I Sat in Engineering Meetings for Two Years...</h4>
+            </div>
+
+            <h2>Recommended Topics</h2>
+
+            <div class="topics">
+                <span>Technology</span>
+                <span>Relationships</span>
+                <span>Self Improvement</span>
+                <span>Writing</span>
+                <span>Machine Learning</span>
+                <span>Politics</span>
+                <span>Cryptocurrency</span>
+            </div>
+
+        </aside>
+
     </div>
-
-</main>
-    
 
 </body>
 </html>
