@@ -1,37 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet"  href="Lec7.css">
+    <title>Layout Clone</title>
+    <link rel="stylesheet" href="Lec7.css">
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">
-            <i class="fa-solid fa-bars"></i>
-            <p>Find</p>
-            <P>Resize</P>
-            <p>Editing</p>
-            
-           </div>
-           
-          <div class="header-right">
-            <p class="sample">Sample</p>
-            <a href="#"></a>
-            <i class="fa-regular fa-bell"></i>
-            <p>🛖</p>
+
+    <!-- Top Navbar -->
+    <header class="topbar">
+        <div class="left">
+            <span>File</span>
+            <span>Resize</span>
+            <span>🖋️Editing</span>
+            <span>↩️</span>
+            <span>↪️</span>
+            <span>☑</span>
         </div>
-        </header>
-       <div class="nev"> hello</div>
-       <div class="sidebar"> hi </div>
-       <div class="discribe"> you</div>
-       <div class="paint"> how</div>
+
+        <div class="center">
+            <h3>Sample</h3>
+        </div>
+
+        <div class="right">
+            <button>📊</button>
+            <button class="trial">💬</button>
+            <button>Present</button>
+            <button class="share">Share</button>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="search-box">
+                <input type="text" placeholder="Describe your ideal design">
+            </div>
+
+            <div class="buttons">
+                <button>Generate</button>
+                <button>Search</button>
+            </div>
+
+            <div class="templates">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+
+        </aside>
+
+        <!-- Main Canvas -->
+        <main class="workspace">
+
+            <div class="toolbar">
+                <span>Edit 🔴 ☰ ╭• ▦ &ensp; Effects</span>
+                <span>Effects</span>
+                <span>Animate</span>
+                <span>Position</span>
+            </div>
+
+            <div class="canvas">
+
+                <!-- Row 1 -->
+                <div class="circle"></div>
+                <div class="square"></div>
+                <div class="triangle"></div>
+                <div class="pentagon"></div>
+
+                <!-- Row 2 -->
+                <div class="plus">+</div>
+                <div class="parallelogram"></div>
+                <div class="arrow"></div>
+                <div class="heart"></div>
+
+            </div>
+
+            <div class="bottom-panel">
+                <div class="page-preview"></div>
+                <button class="add-page">+</button>
+            </div>
+
+        </main>
+
     </div>
-            
-        
-    
-    
+
 </body>
+
 </html>
