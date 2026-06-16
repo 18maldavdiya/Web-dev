@@ -39,7 +39,7 @@ let schedule = [
 
     { doctor: "Dr. Singh", time: "09:00 AM", patient: "Neha", disease: "Leg Fracture" },
     { doctor: "Dr. Singh", time: "10:00 AM", patient: "Patient G", disease: "Bone Pain" },
-    { doctor: "Dr. Singh", time: "11:00 AM", patient: "Patient H", disease: "Joint Problem" },
+    { doctor: "Dr. Singh", time: "11:00 AM", patient: "Patient H", disease: "Joint Problem" }
     { doctor: "Dr. Singh", time: "12:00 PM", patient: "Patient I", disease: "Back Pain" },
 
     { doctor: "Dr. Patel", time: "09:00 AM", patient: "Rohan", disease: "Fever" },
