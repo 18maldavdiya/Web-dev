@@ -90,15 +90,40 @@
 // //
 
 //question 8
-const students = [
-    { names: "A", marks: 35 },
-    { names: "B", marks: 45 },
-    { names: "C", marks: 23 },
-    { names: "D", marks: 23 }
-];
+// const students = [
+//     { names: "A", marks: 35 },
+//     { names: "B", marks: 45 },
+//     { names: "C", marks: 23 },
+//     { names: "D", marks: 23 }
+// ];
 
-const passStudents = students
-    .filter(student => student.marks >= 33)
-    .map(student => student.names);
+// const passStudents = students
+//     .filter(student => student.marks >= 33)
+//     .map(student => student.names);
 
-console.log(passStudents);
+// console.log(passStudents);
+
+// question 9
+// const marks =[80,90,70,60];
+
+// const q9 = marks.reduce(function(total,n){
+//     return total+=n;
+
+// },0)/marks.length;
+// console.log(q9);
+
+
+//question 10
+
+// const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
+// const q10 = fruits.reduce(function(occ, fruit) {
+//     occ[fruit] = (occ[fruit] || 0) + 1;
+//     return occ;
+// }, {});
+// const q10arr = fruits.reduce((occ, fruit) => {
+//     occ[fruit] = (occ[fruit] || 0) + 1;
+//     return occ;
+// }, {});
+// console.log(q10);
+// console.log(q10arr);
+
