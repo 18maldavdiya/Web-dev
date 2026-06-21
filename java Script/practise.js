@@ -178,4 +178,4 @@
 //     return acc;
 // }, {});
 
-// console.log("Q12:", q12);
+// console.log("Q12:", q12)
