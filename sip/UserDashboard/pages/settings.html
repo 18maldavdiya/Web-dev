@@ -1,0 +1,176 @@
+<!-- ==========================================================================
+     SETTINGS PAGE
+     ========================================================================== -->
+
+<style>
+  .settings-section-divider {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1.5rem;
+  }
+  .settings-section-divider:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .setting-row-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+  }
+  .setting-desc-block {
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+  }
+  .setting-title-lbl {
+    font-size: 0.9rem;
+    font-weight: 550;
+    color: var(--text-primary);
+  }
+  .setting-detail-lbl {
+    font-size: 0.775rem;
+    color: var(--text-secondary);
+    margin-top: 2px;
+  }
+  .settings-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+  }
+</style>
+
+<div class="card fade-in" style="max-width: 800px; margin: 0 auto;">
+  <form id="settings-form">
+    
+    <!-- 1. Appearance / Theme Theme toggles -->
+    <div class="settings-section-divider">
+      <h3 class="section-title mb-10"><i class="fas fa-palette" style="color:var(--primary-color);"></i> Appearance &amp; Theme</h3>
+      <div class="setting-row-item">
+        <div class="setting-desc-block">
+          <span class="setting-title-lbl">Dark Mode Theme</span>
+          <span class="setting-detail-lbl">Toggle between light and dark backgrounds for late-night credential browsing.</span>
+        </div>
+        <div>
+          <!-- Switch checkbox -->
+          <label class="switch-control" aria-label="Toggle Dark Mode Theme">
+            <input type="checkbox" id="theme-toggle">
+            <span class="switch-slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Language preferences -->
+    <div class="settings-section-divider">
+      <h3 class="section-title mb-10"><i class="fas fa-language" style="color:var(--primary-color);"></i> Language Preferences</h3>
+      <div class="setting-row-item">
+        <div class="setting-desc-block">
+          <span class="setting-title-lbl">Interface Language</span>
+          <span class="setting-detail-lbl">Select your preferred default language for labels, emails and certificates details translations.</span>
+        </div>
+        <div>
+          <select class="form-control" id="language-select" style="width:160px; padding: 0.5rem 0.75rem;">
+            <option value="en">English (US)</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Notification triggers settings -->
+    <div class="settings-section-divider">
+      <h3 class="section-title mb-10"><i class="fas fa-bell" style="color:var(--primary-color);"></i> Notification Preferences</h3>
+      
+      <!-- Email digests select -->
+      <div class="setting-row-item">
+        <div class="setting-desc-block">
+          <span class="setting-title-lbl">Email Digest Frequency</span>
+          <span class="setting-detail-lbl">How frequently would you like to receive certificates updates summaries emails?</span>
+        </div>
+        <div>
+          <select class="form-control" style="width:160px; padding: 0.5rem 0.75rem;">
+            <option value="instant">Instant Alerts</option>
+            <option value="daily">Daily Summary</option>
+            <option value="weekly">Weekly Digest</option>
+            <option value="never">Never</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- SMS settings -->
+      <div class="setting-row-item">
+        <div class="setting-desc-block">
+          <span class="setting-title-lbl">SMS Alerts for Verifications</span>
+          <span class="setting-detail-lbl">Send a text message alert directly to your phone when a registrar verifies a certificate.</span>
+        </div>
+        <div>
+          <label class="switch-control" aria-label="Toggle SMS Alerts for Verifications">
+            <input type="checkbox" class="settings-checkbox" checked>
+            <span class="switch-slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Security alerts settings -->
+      <div class="setting-row-item">
+        <div class="setting-desc-block">
+          <span class="setting-title-lbl">Security &amp; Login Alerts</span>
+          <span class="setting-detail-lbl">Send warning emails immediately upon new IP logins or password changes.</span>
+        </div>
+        <div>
+          <label class="switch-control" aria-label="Toggle Security and Login Alerts">
+            <input type="checkbox" class="settings-checkbox" checked>
+            <span class="switch-slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Privacy sharing settings -->
+    <div class="settings-section-divider">
+      <h3 class="section-title mb-10"><i class="fas fa-user-shield" style="color:var(--primary-color);"></i> Privacy &amp; Sharing</h3>
+      
+      <!-- Public profile index settings -->
+      <div class="setting-row-item">
+        <div class="setting-desc-block">
+          <span class="setting-title-lbl">Public Search Engine Indexing</span>
+          <span class="setting-detail-lbl">Allow search engines like Google and Bing to crawl and display your public certificates verification profile.</span>
+        </div>
+        <div>
+          <label class="switch-control" aria-label="Toggle Public Search Engine Indexing">
+            <input type="checkbox" class="settings-checkbox">
+            <span class="switch-slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- College directory share -->
+      <div class="setting-row-item">
+        <div class="setting-desc-block">
+          <span class="setting-title-lbl">Share with University Network</span>
+          <span class="setting-detail-lbl">Include your academic achievements in university alumni directories for hiring partners.</span>
+        </div>
+        <div>
+          <label class="switch-control" aria-label="Toggle Share with University Network">
+            <input type="checkbox" class="settings-checkbox" checked>
+            <span class="switch-slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Form controls actions -->
+    <div class="settings-form-actions">
+      <button type="reset" class="btn btn-secondary">Reset to Defaults</button>
+      <button type="submit" class="btn btn-primary">Save Settings</button>
+    </div>
+
+  </form>
+</div>

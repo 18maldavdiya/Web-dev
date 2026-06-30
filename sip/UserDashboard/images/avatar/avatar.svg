@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avatar-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2E8F0" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </linearGradient>
+    <linearGradient id="skin-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD2A8" />
+      <stop offset="100%" stop-color="#FFA87D" />
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="50" fill="url(#avatar-grad)" />
+  <!-- Hair back -->
+  <path d="M25 45 C25 25, 75 25, 75 45 Z" fill="#1E293B" />
+  <!-- Face -->
+  <circle cx="50" cy="48" r="23" fill="url(#skin-grad)" />
+  <!-- Hair front -->
+  <path d="M26 40 C35 25, 65 25, 74 40 C70 30, 30 30, 26 40 Z" fill="#0F172A" />
+  <path d="M27 41 C30 35, 45 35, 47 43" fill="none" stroke="#0F172A" stroke-width="2" stroke-linecap="round" />
+  <!-- Eyes -->
+  <circle cx="43" cy="46" r="2.5" fill="#1E293B" />
+  <circle cx="57" cy="46" r="2.5" fill="#1E293B" />
+  <!-- Mouth -->
+  <path d="M46 56 Q50 60 54 56" fill="none" stroke="#E11D48" stroke-width="2" stroke-linecap="round" />
+  <!-- Neck & Clothes -->
+  <path d="M43 68 L57 68 L55 71 L45 71 Z" fill="url(#skin-grad)" />
+  <path d="M25 78 C25 66, 75 66, 75 78 C75 90, 25 90, 25 78 Z" fill="#2563EB" />
+  <path d="M50 72 L45 78 L55 78 Z" fill="#E2E8F0" />
+</svg>

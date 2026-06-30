@@ -1,0 +1,254 @@
+<!-- ==========================================================================
+     HELP & SUPPORT MODULE
+     ========================================================================== -->
+
+<!-- Additional support Styles -->
+<style>
+  .faq-support-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  /* FAQ Accordion */
+  .faq-accordion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .faq-accordion-item {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--card-color);
+    overflow: hidden;
+    transition: var(--transition-smooth);
+  }
+
+  .faq-accordion-header {
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 550;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    background-color: var(--card-color);
+    transition: var(--transition-smooth);
+    user-select: none;
+  }
+
+  .faq-accordion-header:hover {
+    background-color: var(--background-color);
+  }
+
+  .faq-accordion-header i {
+    transition: transform 0.3s ease;
+    color: var(--text-secondary);
+  }
+
+  .faq-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 1.25rem;
+    background-color: var(--card-color);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+
+  /* Active State styles */
+  .faq-accordion-item.active {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .faq-accordion-item.active .faq-accordion-header {
+    background-color: rgba(37, 99, 235, 0.02);
+    color: var(--primary-color);
+  }
+
+  .faq-accordion-item.active .faq-accordion-header i {
+    transform: rotate(180deg);
+    color: var(--primary-color);
+  }
+
+  .faq-accordion-item.active .faq-accordion-content {
+    max-height: 200px;
+    padding-bottom: 1.25rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+  }
+</style>
+
+<div class="faq-support-grid">
+  
+  <!-- Left Side FAQs -->
+  <section class="card fade-in">
+    <h2 class="section-title mb-20"><i class="fas fa-question-circle" style="color:var(--primary-color)"></i> Frequently Asked Questions</h2>
+    
+    <div class="faq-accordion-list">
+      <!-- FAQ 1 -->
+      <div class="faq-accordion-item">
+        <div class="faq-accordion-header">
+          <span>How does the Online Certificate Verification System (OCVS) work?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-accordion-content">
+          OCVS matches your certificate ID with the encrypted registry database. Once verification completes, it returns dynamic authenticity details signed by university authorities.
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-accordion-item">
+        <div class="faq-accordion-header">
+          <span>What is the average verification approval time?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-accordion-content">
+          Standard academic credential verification takes between 24 to 48 working hours from the moment documents upload to the registrar queue.
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-accordion-item">
+        <div class="faq-accordion-header">
+          <span>How do I share my certificate verified profile on LinkedIn?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-accordion-content">
+          Navigate to the details view, click the 'Share Link' option, select LinkedIn or copy the public link. You can add this URL directly inside the Licenses &amp; Certifications profile block.
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-accordion-item">
+        <div class="faq-accordion-header">
+          <span>Why is my certificate verification marked as 'Rejected'?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-accordion-content">
+          Rejection usually occurs if uploaded metadata does not match official registrar records, signatures are illegible, or university stamps are missing. Contact support with corrections.
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-accordion-item">
+        <div class="faq-accordion-header">
+          <span>Can I print a physical copy of my digital certificate?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-accordion-content">
+          Yes! Go to the details page, click 'Print'. The custom media print styles will crop unnecessary navbar and sidebar borders and print only the high-resolution certificate canvas.
+        </div>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="faq-accordion-item">
+        <div class="faq-accordion-header">
+          <span>Is my credential data storage secure?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-accordion-content">
+          Absolutely. Your record keys are hashed and cryptographically signed. All student records conform to university privacy compliance policies.
+        </div>
+      </div>
+
+      <!-- FAQ 7 -->
+      <div class="faq-accordion-item">
+        <div class="faq-accordion-header">
+          <span>What format are the download certificates in?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-accordion-content">
+          Downloads are compiled as standardized vector-embedded PDF documents, ensuring clear scaling for printing or high-definition screens.
+        </div>
+      </div>
+
+      <!-- FAQ 8 -->
+      <div class="faq-accordion-item">
+        <div class="faq-accordion-header">
+          <span>What is the golden verification seal?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-accordion-content">
+          The golden seal is a dynamic visual tag rendered only on certificates currently verified by the central registrar database.
+        </div>
+      </div>
+
+      <!-- FAQ 9 -->
+      <div class="faq-accordion-item">
+        <div class="faq-accordion-header">
+          <span>How can a recruiter verify my certificate?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-accordion-content">
+          Recruiters can either scan the verified QR code directly using their mobile phones or navigate to the public verification page using the copied link.
+        </div>
+      </div>
+
+      <!-- FAQ 10 -->
+      <div class="faq-accordion-item">
+        <div class="faq-accordion-header">
+          <span>Can I edit my name or enrollment ID in profile details?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-accordion-content">
+          No. Fields like name and enrollment ID are locked for security once verified. If you need to make correction requests, please submit the helpdesk contact form below.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Right Side Form & support desk details -->
+  <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+    <!-- Contact Info card -->
+    <section class="card fade-in" style="animation-delay: 0.1s;">
+      <h3 class="section-title mb-10"><i class="fas fa-headset" style="color:var(--primary-color)"></i> Support Desk</h3>
+      <p style="font-size:0.8rem; color:var(--text-secondary); margin-bottom: 1.25rem;">Our customer success desk is available to assist with records corrections or registration queries.</p>
+      
+      <table class="info-table" style="font-size: 0.8rem;">
+        <tr>
+          <td class="info-label" style="width:30%"><i class="fas fa-envelope"></i> Email</td>
+          <td class="info-val">support@ocvs.org</td>
+        </tr>
+        <tr>
+          <td class="info-label"><i class="fas fa-phone-alt"></i> Hotline</td>
+          <td class="info-val">+1 (555) 880-9281</td>
+        </tr>
+        <tr>
+          <td class="info-label"><i class="fas fa-history"></i> Hours</td>
+          <td class="info-val">Mon - Fri, 9 AM - 6 PM EST</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Support Form -->
+    <section class="card fade-in" style="animation-delay: 0.2s;">
+      <h3 class="section-title mb-10"><i class="fas fa-paper-plane" style="color:var(--primary-color)"></i> Send a Message</h3>
+      
+      <form id="contact-form">
+        <div class="form-group">
+          <label class="form-label" for="support-name">Your Name</label>
+          <input type="text" class="form-control" id="support-name" required value="John Doe">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="support-email">Your Email</label>
+          <input type="email" class="form-control" id="support-email" required value="john.doe@apex.edu">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="support-subject">Subject</label>
+          <input type="text" class="form-control" id="support-subject" required placeholder="Correction/Query subject">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="support-msg">Message</label>
+          <textarea class="form-control" id="support-msg" rows="4" required style="resize:none;" placeholder="Type your query..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-full">Send Message</button>
+      </form>
+    </section>
+  </div>
+  
+</div>

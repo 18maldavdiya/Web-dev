@@ -1,0 +1,43 @@
+<!-- ==========================================================================
+     MY CERTIFICATES LISTING PAGE
+     ========================================================================== -->
+
+<!-- Filters and Toolbar card -->
+<div class="card toolbar-card fade-in">
+  <div class="toolbar-layout">
+    <!-- Search Box -->
+    <div class="search-box-wrapper">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search by name, ID or course..." id="certs-search-input">
+    </div>
+    
+    <!-- Filter Chips -->
+    <div class="filter-chips">
+      <button class="filter-chip active" data-filter="all">All Certificates</button>
+      <button class="filter-chip" data-filter="verified">Verified</button>
+      <button class="filter-chip" data-filter="pending">Pending</button>
+      <button class="filter-chip" data-filter="rejected">Rejected</button>
+    </div>
+    
+    <!-- Sorting Select -->
+    <div class="sort-dropdown-wrapper">
+      <label for="certs-sort-select">Sort By:</label>
+      <select id="certs-sort-select" class="sort-select">
+        <option value="newest">Newest First</option>
+        <option value="oldest">Oldest First</option>
+        <option value="a-z">Alphabetical (A-Z)</option>
+        <option value="z-a">Alphabetical (Z-A)</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- Cards Grid display -->
+<section class="certificates-grid" id="certs-grid">
+  <!-- JavaScript will inject 6 certificate cards here recursively -->
+</section>
+
+<!-- Pagination -->
+<div class="pagination-container" id="certs-pagination">
+  <!-- JavaScript will inject pagination buttons dynamically -->
+</div>

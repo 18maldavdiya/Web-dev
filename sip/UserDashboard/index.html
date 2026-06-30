@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Online Certificate Verification System - User Dashboard</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Securely verify, share, and manage academic certificates and professional credentials with our premium SaaS solution.">
+  <meta name="keywords" content="certificate verification, credentials, academic verification, blockchain credentials, student portfolio">
+  <meta name="author" content="Antigravity Architecture">
+
+  <!-- Google Fonts - Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/certificate.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="css/notification.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- 1. Global Page Loader -->
+  <div id="page-loader" class="page-loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- 2. Application Layout Wrapper -->
+  <div id="app-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <a href="#/dashboard" class="logo-container">
+          <img src="images/logo/logo.svg" alt="OCVS Logo" class="logo-icon" id="sidebar-logo-img">
+          <span class="logo-text">OCVS Portal</span>
+        </a>
+        <button id="collapse-btn" class="collapse-btn" title="Collapse Menu">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+      </div>
+      
+      <ul class="sidebar-menu">
+        <li class="active">
+          <a href="#/dashboard" id="nav-dashboard">
+            <i class="fas fa-chart-line"></i>
+            <span class="menu-text">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#/my-certificates" id="nav-certificates">
+            <i class="fas fa-certificate"></i>
+            <span class="menu-text">My Certificates</span>
+          </a>
+        </li>
+        <li>
+          <a href="#/certificate-details" id="nav-details">
+            <i class="fas fa-file-invoice"></i>
+            <span class="menu-text">Certificate Details</span>
+          </a>
+        </li>
+        <li>
+          <a href="#/profile" id="nav-profile-link">
+            <i class="fas fa-user-circle"></i>
+            <span class="menu-text">My Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="#/notifications" id="nav-notifications">
+            <i class="fas fa-bell"></i>
+            <span class="menu-text">Notifications</span>
+          </a>
+        </li>
+        <li>
+          <a href="#/help" id="nav-help">
+            <i class="fas fa-question-circle"></i>
+            <span class="menu-text">Help &amp; Support</span>
+          </a>
+        </li>
+        <li>
+          <a href="#/settings" id="nav-settings">
+            <i class="fas fa-cog"></i>
+            <span class="menu-text">Settings</span>
+          </a>
+        </li>
+        <li style="margin-top: auto; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px;">
+          <a href="#/dashboard" onclick="showToast('Mock Logout: session cleared.', 'info');" id="nav-logout">
+            <i class="fas fa-sign-out-alt"></i>
+            <span class="menu-text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div id="main-wrapper" class="main-wrapper">
+      
+      <!-- Top Sticky Navigation Bar -->
+      <header class="navbar" id="navbar">
+        <div class="navbar-left">
+          <button id="menu-toggle" class="menu-toggle-btn" title="Open Drawer Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <nav class="breadcrumb-nav" id="breadcrumb" aria-label="Breadcrumb">
+            <a href="#/dashboard">Portal</a>
+            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="active" id="breadcrumb-current">Dashboard</span>
+          </nav>
+        </div>
+        
+        <div class="navbar-right">
+          <!-- Live Global Search inside Header -->
+          <div class="navbar-search" id="navbar-search-wrapper">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search certificates..." id="navbar-global-search" oninput="if(window.location.hash!=='#/my-certificates'){window.location.hash='#/my-certificates';} setTimeout(()=>{const inp=document.getElementById('certs-search-input'); if(inp){inp.value=this.value; inp.dispatchEvent(new Event('input'));}}, 200);">
+          </div>
+          
+          <!-- Notifications Bell -->
+          <button class="nav-action-btn" onclick="window.location.hash='#/notifications';" title="View Notifications" aria-label="Notifications Notification Bell">
+            <i class="fas fa-bell"></i>
+            <span class="notification-badge" id="navbar-bell-badge" style="display: none;"></span>
+          </button>
+          
+          <!-- Profile avatar and dropdown trigger -->
+          <div class="nav-profile" id="nav-profile" aria-haspopup="true" aria-expanded="false" aria-label="User profile dropdown menu">
+            <img src="images/avatar/avatar.svg" alt="User Avatar" class="nav-avatar" id="navbar-user-avatar">
+            <div class="user-info">
+              <span class="user-name" id="navbar-user-fullname">John Doe</span>
+              <span class="user-role">Student Account</span>
+            </div>
+            <i class="fas fa-chevron-down" style="font-size:0.75rem; color:var(--text-secondary);"></i>
+            
+            <!-- Context Menu Dropdown -->
+            <div class="profile-dropdown" id="profile-dropdown">
+              <a href="#/profile"><i class="fas fa-user"></i> My Profile</a>
+              <a href="#/settings"><i class="fas fa-cog"></i> Settings</a>
+              <hr style="border:none; border-bottom:1px solid var(--border-color); margin:5px 0;">
+              <a href="#/dashboard" onclick="showToast('Mock Logout successful', 'info')"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Central Dynamic Inject Container -->
+      <main id="content-area">
+        <!-- SPA Pages are loaded here dynamically -->
+      </main>
+
+      <!-- App Footer -->
+      <footer class="footer" id="app-footer">
+        <div>
+          &copy; 2026 <a href="https://github.com" target="_blank">Online Certificate Verification System</a>. All rights reserved.
+        </div>
+        <div style="font-weight: 500;">
+          Version 1.0.0
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification Container Overlay -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Back to Top Trigger -->
+  <button id="back-to-top" class="back-to-top" title="Go to top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Application Main Core script -->
+  <script src="js/sidebar.js"></script>
+</body>
+</html>

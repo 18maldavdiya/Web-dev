@@ -1,0 +1,147 @@
+<!-- ==========================================================================
+     DASHBOARD PAGE CONTENT
+     ========================================================================== -->
+
+<!-- 1. Hero Greeting Banner -->
+<section class="hero-card fade-in">
+  <div class="hero-content">
+    <div class="hero-date" id="hero-current-date">June 28, 2026</div>
+    <h1 id="hero-welcome-msg">Good Evening, John Doe</h1>
+    <p>Manage and share your verified academic credentials securely. You have 2 pending reviews that require documentation verification.</p>
+    <a href="#/my-certificates" class="btn btn-primary"><i class="fas fa-certificate"></i> View Certificates</a>
+  </div>
+</section>
+
+<!-- 2. Statistics Grid Cards -->
+<section class="stats-grid">
+  <!-- Total -->
+  <div class="card stat-card stat-primary fade-in">
+    <div class="stat-info">
+      <span class="stat-title">Total Certificates</span>
+      <span class="stat-number" id="count-total">0</span>
+      <span class="stat-desc"><i class="fas fa-level-up-alt trend-up"></i> +12% this semester</span>
+    </div>
+    <div class="stat-icon-wrapper">
+      <i class="fas fa-graduation-cap"></i>
+    </div>
+  </div>
+  
+  <!-- Verified -->
+  <div class="card stat-card stat-success fade-in" style="animation-delay: 0.1s;">
+    <div class="stat-info">
+      <span class="stat-title">Verified</span>
+      <span class="stat-number" id="count-verified">0</span>
+      <span class="stat-desc"><i class="fas fa-check trend-up"></i> 15 active credentials</span>
+    </div>
+    <div class="stat-icon-wrapper">
+      <i class="fas fa-shield-alt"></i>
+    </div>
+  </div>
+  
+  <!-- Pending -->
+  <div class="card stat-card stat-warning fade-in" style="animation-delay: 0.2s;">
+    <div class="stat-info">
+      <span class="stat-title">Pending</span>
+      <span class="stat-number" id="count-pending">0</span>
+      <span class="stat-desc"><i class="fas fa-clock"></i> 4 in verification queue</span>
+    </div>
+    <div class="stat-icon-wrapper">
+      <i class="fas fa-hourglass-half"></i>
+    </div>
+  </div>
+  
+  <!-- Downloads -->
+  <div class="card stat-card stat-danger fade-in" style="animation-delay: 0.3s;">
+    <div class="stat-info">
+      <span class="stat-title">Total Downloads</span>
+      <span class="stat-number" id="count-downloads">0</span>
+      <span class="stat-desc"><i class="fas fa-download trend-up"></i> 28 copies downloaded</span>
+    </div>
+    <div class="stat-icon-wrapper">
+      <i class="fas fa-file-download"></i>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Quick Actions Menu -->
+<section class="quick-actions-section mb-20 fade-in" style="animation-delay: 0.2s;">
+  <div class="section-header">
+    <h2 class="section-title">Quick Actions</h2>
+  </div>
+  <div class="quick-actions-grid">
+    <a href="#/my-certificates" class="quick-action-btn">
+      <i class="fas fa-search-plus"></i>
+      <span>Browse Certificates</span>
+    </a>
+    <button class="quick-action-btn btn-download-mock" data-id="Latest">
+      <i class="fas fa-file-pdf"></i>
+      <span>Download Latest PDF</span>
+    </button>
+    <a href="#/profile" class="quick-action-btn">
+      <i class="fas fa-user-edit"></i>
+      <span>Update Profile Details</span>
+    </a>
+    <a href="#/help" class="quick-action-btn">
+      <i class="fas fa-headset"></i>
+      <span>Helpdesk Support</span>
+    </a>
+  </div>
+</section>
+
+<!-- 4. Main Mid Grid section -->
+<div class="dashboard-grid">
+  <!-- Recent Certificates Table Card -->
+  <section class="card table-card fade-in" style="animation-delay: 0.3s;">
+    <div class="table-header-row">
+      <h2 class="section-title">Recent Certificates</h2>
+      <a href="#/my-certificates" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.5rem 1rem;">View All</a>
+    </div>
+    <div class="table-responsive">
+      <table class="dashboard-table">
+        <thead>
+          <tr>
+            <th>Certificate ID</th>
+            <th>Name</th>
+            <th>Issued By</th>
+            <th>Issue Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="recent-certs-tbody">
+          <!-- Dynamic rendering from dashboard.js -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Recent Activity Timeline Card -->
+  <section class="card timeline-card fade-in" style="animation-delay: 0.4s;">
+    <div class="section-header">
+      <h2 class="section-title">Recent Activity</h2>
+    </div>
+    <div class="timeline" id="dashboard-timeline">
+      <!-- Dynamic rendering from dashboard.js -->
+    </div>
+  </section>
+</div>
+
+<script>
+  // Simple current date text binding on load
+  const now = new Date();
+  const dateEl = document.getElementById('hero-current-date');
+  if (dateEl) {
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    dateEl.textContent = now.toLocaleDateString('en-US', options);
+  }
+
+  // Morning/Evening welcome text adjustments
+  const hours = now.getHours();
+  const welcomeEl = document.getElementById('hero-welcome-msg');
+  if (welcomeEl) {
+    let greeting = "Good Morning";
+    if (hours >= 12 && hours < 17) greeting = "Good Afternoon";
+    if (hours >= 17) greeting = "Good Evening";
+    welcomeEl.textContent = `${greeting}, John Doe`;
+  }
+</script>

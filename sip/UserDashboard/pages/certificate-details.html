@@ -1,0 +1,101 @@
+<!-- ==========================================================================
+     CERTIFICATE DETAILS PREVIEW PAGE
+     ========================================================================== -->
+
+<!-- Detail Header Actions -->
+<div class="details-header fade-in">
+  <a href="#/my-certificates" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to Listing</a>
+  <div>
+    <span class="badge badge-success" id="dt-cert-status-badge" style="font-size:0.85rem; padding: 0.4rem 1rem;">verified</span>
+  </div>
+</div>
+
+<!-- Details Grid -->
+<div class="details-grid">
+  <!-- Left Side: Interactive SVG preview frame card -->
+  <section class="card certificate-preview-card fade-in">
+    <div class="certificate-frame" id="cert-detail-frame-container">
+      <!-- High fidelity SVG Certificate content will be injected by certificate.js -->
+    </div>
+  </section>
+
+  <!-- Right Side Details panel -->
+  <div class="details-sidebar">
+    <!-- Student details card -->
+    <section class="card fade-in" style="animation-delay: 0.1s;">
+      <h3 class="section-title mb-10"><i class="fas fa-user-graduate" style="color:var(--primary-color);"></i> Student Information</h3>
+      <table class="info-table">
+        <tr>
+          <td class="info-label">Student Name</td>
+          <td class="info-val" id="dt-student-name">Loading...</td>
+        </tr>
+        <tr>
+          <td class="info-label">Enrollment Number</td>
+          <td class="info-val" id="dt-enrollment">Loading...</td>
+        </tr>
+        <tr>
+          <td class="info-label">Registered Course</td>
+          <td class="info-val" id="dt-course">Loading...</td>
+        </tr>
+        <tr>
+          <td class="info-label">Department</td>
+          <td class="info-val" id="dt-department">Loading...</td>
+        </tr>
+        <tr>
+          <td class="info-label">College/University</td>
+          <td class="info-val" id="dt-college">Loading...</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Certificate details card -->
+    <section class="card fade-in" style="animation-delay: 0.2s;">
+      <h3 class="section-title mb-10"><i class="fas fa-file-signature" style="color:var(--primary-color);"></i> Credential Information</h3>
+      <table class="info-table">
+        <tr>
+          <td class="info-label">Credential ID</td>
+          <td class="info-val" id="dt-cert-id" style="font-family: monospace; font-size:0.9rem; font-weight:600;">Loading...</td>
+        </tr>
+        <tr>
+          <td class="info-label">Certificate Title</td>
+          <td class="info-val" id="dt-cert-title">Loading...</td>
+        </tr>
+        <tr>
+          <td class="info-label">Issued Organisation</td>
+          <td class="info-val" id="dt-cert-issuer">Loading...</td>
+        </tr>
+        <tr>
+          <td class="info-label">Issued Date</td>
+          <td class="info-val" id="dt-cert-issue">Loading...</td>
+        </tr>
+        <tr>
+          <td class="info-label">Expiration Date</td>
+          <td class="info-val" id="dt-cert-expiry">Loading...</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Verification status QR code card -->
+    <section class="card fade-in" style="animation-delay: 0.3s;">
+      <div class="verification-widget">
+        <!-- Mock QR Code SVG -->
+        <div class="qr-code-wrapper" id="detail-qr-code" title="Verification Scan QR">
+          <!-- SVG injected dynamically -->
+        </div>
+        <div class="verification-status-panel">
+          <div class="verification-status-title" style="color: var(--success-color);">
+            <i class="fas fa-check-double"></i> Certified Authentic
+          </div>
+          <p class="verification-status-desc">This credential is mathematically verified on-chain. Scan the QR code or share the link to verify credentials public profile registry.</p>
+        </div>
+      </div>
+      
+      <!-- Operations button triggers -->
+      <div class="details-action-bar" style="margin-top: 1.5rem; padding-top:1.25rem; border-top:1px solid var(--border-color)">
+        <button class="btn btn-secondary" id="details-print-btn" title="Print Certificate Frame"><i class="fas fa-print"></i> Print</button>
+        <button class="btn btn-secondary" id="details-share-btn" title="Share Public Link"><i class="fas fa-share-alt"></i> Share Link</button>
+        <button class="btn btn-primary" id="details-download-btn" title="Download PDF Copy"><i class="fas fa-download"></i> Download PDF</button>
+      </div>
+    </section>
+  </div>
+</div>

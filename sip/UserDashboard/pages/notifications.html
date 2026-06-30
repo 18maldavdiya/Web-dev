@@ -1,0 +1,32 @@
+<!-- ==========================================================================
+     NOTIFICATIONS PAGE
+     ========================================================================== -->
+
+<!-- Actions Bar -->
+<div class="card toolbar-card fade-in">
+  <div class="notification-action-bar">
+    <!-- Filter Chips -->
+    <div class="notification-filters">
+      <button class="filter-chip notification-filter-chip active" data-filter="all">All Notifications</button>
+      <button class="filter-chip notification-filter-chip" data-filter="unread">Unread <span class="badge badge-warning" id="notifications-unread-count" style="margin-left: 5px; padding: 2px 6px; font-size:0.65rem;">3</span></button>
+    </div>
+    
+    <!-- Mass actions -->
+    <div class="notification-actions-right">
+      <button class="btn btn-secondary" id="notif-mark-all-btn"><i class="fas fa-check-double"></i> Mark All as Read</button>
+      <button class="btn btn-secondary" onclick="showToast('Mock Settings: notifications alerts preferences open.', 'info');" title="Alerts Settings"><i class="fas fa-sliders-h"></i> Prefs</button>
+    </div>
+  </div>
+</div>
+
+<!-- Dynamic Notifications list -->
+<section class="notification-list" id="notifications-list">
+  <!-- JavaScript will inject 15 notification cards dynamically -->
+</section>
+
+<!-- Empty state screen overlay -->
+<div class="card notification-empty-state" id="notifications-empty-state">
+  <div class="empty-icon-circle"><i class="fas fa-bell-slash"></i></div>
+  <h3 class="empty-title">All caught up!</h3>
+  <p class="empty-desc">You have no new notifications right now. Any active updates will show up here.</p>
+</div>

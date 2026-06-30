@@ -1,0 +1,528 @@
+/* ==========================================================================
+   CERTIFICATE.CSS - Certificate Card Grid, Search Filters & Preview Details
+   ========================================================================== */
+
+/* 1. Filtering & Search Toolbar */
+.toolbar-card {
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.toolbar-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.search-box-wrapper {
+  position: relative;
+  flex-grow: 1;
+  max-width: 450px;
+  min-width: 250px;
+}
+
+.search-box-wrapper input {
+  width: 100%;
+  padding: 0.625rem 1rem 0.625rem 2.25rem;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border-color);
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+.search-box-wrapper i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+}
+
+.search-box-wrapper input:focus {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-glow);
+}
+
+.filter-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-chip {
+  padding: 0.5rem 1rem;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: var(--transition-smooth);
+}
+
+.filter-chip:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.filter-chip.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--text-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.sort-dropdown-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort-dropdown-wrapper label {
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.sort-select {
+  padding: 0.625rem 2rem 0.625rem 0.875rem;
+  font-family: var(--font-family);
+  font-size: 0.825rem;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--card-color);
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px;
+  min-width: 150px;
+  transition: var(--transition-smooth);
+}
+
+.sort-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-glow);
+}
+
+/* 2. Certificate Cards Grid */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.certificate-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.certificate-thumb {
+  position: relative;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius-sm);
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  margin-bottom: 1rem;
+}
+
+.certificate-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.certificate-card:hover .certificate-thumb img {
+  transform: scale(1.05);
+}
+
+.certificate-status-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  box-shadow: var(--shadow-md);
+}
+
+.certificate-card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.certificate-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.certificate-meta-list {
+  list-style: none;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.certificate-meta-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.certificate-meta-list i {
+  color: var(--text-muted);
+  width: 14px;
+  text-align: center;
+}
+
+.certificate-card-actions {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 6px;
+  margin-top: auto;
+}
+
+/* 3. Pagination styling */
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 3rem;
+}
+
+.pagination-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--border-radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-color);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.pagination-btn:hover:not(:disabled) {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: rgba(37, 99, 235, 0.05);
+}
+
+.pagination-btn.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--text-white);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 4. Certificate Details Page Layout */
+.details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.certificate-preview-card {
+  padding: 1rem;
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.certificate-frame {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  background-color: var(--background-color);
+}
+
+.certificate-frame embed,
+.certificate-frame iframe,
+.certificate-frame object,
+.certificate-frame svg {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.details-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info-table tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.info-table tr:last-child {
+  border-bottom: none;
+}
+
+.info-table td {
+  padding: 0.75rem 0;
+  font-size: 0.85rem;
+}
+
+.info-table td.info-label {
+  font-weight: 550;
+  color: var(--text-secondary);
+  width: 40%;
+}
+
+.info-table td.info-val {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Verification and QR section */
+.verification-widget {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.qr-code-wrapper {
+  width: 90px;
+  height: 90px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  padding: 6px;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-code-wrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
+.verification-status-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.verification-status-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.verification-status-desc {
+  font-size: 0.775rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Details Page Action Bars */
+.details-action-bar {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.details-action-bar .btn {
+  flex-grow: 1;
+}
+
+/* Share Overlay Modal styling */
+.share-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity var(--transition-speed);
+}
+
+.share-modal-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.share-modal {
+  background-color: var(--card-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  padding: 1.75rem;
+  width: 450px;
+  max-width: 90%;
+  animation: modalSlide 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalSlide {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.share-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.share-links-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.share-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  gap: 6px;
+}
+
+.share-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: var(--transition-smooth);
+  color: var(--text-primary);
+}
+
+.share-option:hover .share-icon-circle {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  transform: translateY(-2px);
+}
+
+.share-link-input-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.share-link-input-wrapper input {
+  flex-grow: 1;
+}
+
+/* 5. Print Media Styles (Prints only the certificate border contents) */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  
+  #app-layout, .main-wrapper, #content-area, .details-grid, .certificate-preview-card, .certificate-frame, .certificate-frame svg {
+    visibility: visible !important;
+  }
+  
+  body, #app-layout, .main-wrapper, #content-area {
+    background-color: #FFFFFF !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .certificate-preview-card {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .certificate-frame {
+    border: none !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 11;
+  }
+
+  .sidebar, .navbar, .details-header, .details-sidebar, .footer, .back-to-top {
+    display: none !important;
+  }
+}
+
+/* 6. Tablet/Laptop scaling */
+@media screen and (max-width: 1200px) {
+  .certificates-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .toolbar-layout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box-wrapper {
+    max-width: 100%;
+  }
+
+  .sort-select {
+    width: 100%;
+  }
+}

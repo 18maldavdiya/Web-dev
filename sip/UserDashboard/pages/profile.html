@@ -1,0 +1,126 @@
+<!-- ==========================================================================
+     MY PROFILE PAGE
+     ========================================================================== -->
+
+<div class="profile-grid">
+  <!-- Left Side: Profile Summary card -->
+  <aside class="card profile-summary-card fade-in">
+    <!-- User Photo with Hover Edit overlay -->
+    <div class="profile-avatar-wrapper" onclick="showToast('Mock Profile Avatar upload triggered!', 'info');">
+      <img src="images/avatar/avatar.svg" alt="Profile Picture" id="sm-profile-avatar">
+      <div class="avatar-upload-overlay">
+        <i class="fas fa-camera"></i>
+        <span>Change Photo</span>
+      </div>
+    </div>
+    
+    <!-- User details tags -->
+    <h2 class="profile-summary-name" id="sm-profile-name">John Doe</h2>
+    <span class="profile-summary-email" id="sm-profile-email">john.doe@apex.edu</span>
+    
+    <div class="profile-summary-badges">
+      <span class="badge badge-success" style="font-weight: 600;"><i class="fas fa-award"></i> Verified Scholar</span>
+      <span class="badge badge-warning" style="font-weight: 600;"><i class="fas fa-crown"></i> Premium</span>
+    </div>
+    
+    <!-- Stats numbers -->
+    <div class="profile-stats-mini">
+      <div class="stat-item-mini">
+        <span class="num" id="sm-stats-total">20</span>
+        <span class="lbl">Total</span>
+      </div>
+      <div class="stat-item-mini" style="border-left: 1px solid var(--border-color)">
+        <span class="num" id="sm-stats-verified" style="color:var(--success-color)">15</span>
+        <span class="lbl">Verified</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Right Side: Editable Details form and password change trigger -->
+  <div class="profile-details-wrapper">
+    <!-- General Profile form card -->
+    <section class="card fade-in" style="animation-delay: 0.1s; margin-bottom: 1.5rem;">
+      <div class="form-header-row">
+        <h3 class="section-title"><i class="fas fa-user-edit" style="color:var(--primary-color);"></i> Personal Details</h3>
+        <button type="button" class="btn btn-primary" id="profile-edit-btn"><i class="fas fa-edit"></i> Edit Profile</button>
+      </div>
+      
+      <form id="profile-edit-form">
+        <div class="form-row">
+          <!-- Name -->
+          <div class="form-group">
+            <label class="form-label" for="pf-name">Full Name *</label>
+            <input type="text" class="form-control" id="pf-name" required disabled>
+          </div>
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label" for="pf-email">Academic Email *</label>
+            <input type="email" class="form-control" id="pf-email" required disabled>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <!-- Phone -->
+          <div class="form-group">
+            <label class="form-label" for="pf-phone">Phone Number *</label>
+            <input type="tel" class="form-control" id="pf-phone" required disabled>
+          </div>
+          <!-- Gender -->
+          <div class="form-group">
+            <label class="form-label" for="pf-gender">Gender</label>
+            <select class="form-control" id="pf-gender" disabled>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <!-- DOB -->
+          <div class="form-group">
+            <label class="form-label" for="pf-dob">Date of Birth</label>
+            <input type="date" class="form-control" id="pf-dob" disabled>
+          </div>
+          <!-- Enrollment -->
+          <div class="form-group">
+            <label class="form-label" for="pf-enrollment">Enrollment ID</label>
+            <input type="text" class="form-control" id="pf-enrollment" disabled>
+          </div>
+        </div>
+
+        <!-- Address -->
+        <div class="form-group">
+          <label class="form-label" for="pf-address">Current Address</label>
+          <input type="text" class="form-control" id="pf-address" disabled>
+        </div>
+
+        <div class="form-row">
+          <!-- College -->
+          <div class="form-group">
+            <label class="form-label" for="pf-college">College / University</label>
+            <input type="text" class="form-control" id="pf-college" disabled>
+          </div>
+          <!-- Dept -->
+          <div class="form-group">
+            <label class="form-label" for="pf-department">Department / Branch</label>
+            <input type="text" class="form-control" id="pf-department" disabled>
+          </div>
+        </div>
+
+        <!-- Form Edit Action Row -->
+        <div class="profile-edit-actions" style="display: none;" id="profile-actions-wrapper">
+          <button type="button" class="btn btn-secondary" id="profile-cancel-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="profile-save-btn">Save Changes</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Account security forms card -->
+    <section class="card fade-in" style="animation-delay: 0.2s;">
+      <h3 class="section-title mb-10"><i class="fas fa-shield-alt" style="color:var(--primary-color)"></i> Account Security</h3>
+      <p style="font-size:0.825rem; color:var(--text-secondary); margin-bottom: 1.25rem;">We recommend updating your password periodically to keep credentials storage secure.</p>
+      <button type="button" class="btn btn-secondary" id="profile-change-pass-btn"><i class="fas fa-key"></i> Update Account Password</button>
+    </section>
+  </div>
+</div>
