@@ -3,11 +3,27 @@ const app = express();
 const port = 8080;
 const path = require("path");
 
+app.use(express.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 app.set("views",path.join(__dirname,"views"));
-aapp.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/",(req,res)=>{
+let posts = [
+    {
+        username : "hanish",
+        content : "I love coding"
+    },
+     {
+        username : "Manish",
+        content : "I love coding"
+    },
+     {
+        username : "mohit",
+        content : "I love coding"
+    },
+]
+
+app.get("/post",(req,res)=>{
     res.send("serving working well");
 })
 app.listen(port, () =>{
