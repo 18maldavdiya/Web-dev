@@ -15,16 +15,24 @@ let posts = [
     },
      {
         username : "Manish",
-        content : "I love coding"
+        content : "i am a hard worker"
     },
      {
         username : "mohit",
-        content : "I love coding"
+        content : "he is good lisning"
     },
 ]
 
 app.get("/post",(req,res)=>{
-    res.send("serving working well");
+    res.render("index.ejs",{posts});
+})
+app.get("/post/new",(req,res)=>{
+    res.render("new.ejs",{posts});
+})
+app.post("/posts",(req,res) =>{
+    let {username , content} = req.body;
+    posts.push({username , content});
+    res.send("post request is working");
 })
 app.listen(port, () =>{
     console.log(`server is listening at ${port}`);
