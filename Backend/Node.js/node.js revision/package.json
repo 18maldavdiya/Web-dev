@@ -1,0 +1,12 @@
+{
+  "name": "node.js-revision",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Hniah",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
