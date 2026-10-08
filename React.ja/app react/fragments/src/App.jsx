@@ -1,16 +1,12 @@
 import React from 'react'
-
+import FoodItems from './componemt/foodItems.jsx'
+import ErrorMessage from './componemt/ErrorMessage.jsx' 
 function App() {
-
-  let foodItems = ['Dal', 'green veg', 'Roti', 'salad', 'Milk']
   return (
     <div>
       <h1>Healthy food</h1>
-      <ul className="list-group">
-        {foodItems.map((item) => (
-          <li className="list-group-item">{item}</li>
-        ))}
-      </ul>
+      <ErrorMessage/>
+      <FoodItems/>
     </div>
   )
 }
