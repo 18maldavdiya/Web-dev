@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.student-card {
+  width: 200px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px #00000015;
+  background-color:brown;
+}
+.img{
+    height :100px;
+    width: 100px;
+    border-radius:12px;
+}
