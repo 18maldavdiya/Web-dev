@@ -3,7 +3,7 @@ function Student({name , cource ,marks}){
         <div className ='student-card'>
             <h2>Student name : {name}</h2>
             <p>cource :{cource}</p>
-            <p>marks : {marks} {marks >=40 ? "Pass  " : "Fail"} </p>
+            <p>{marks >=90 ? "A" :marks >=60? "B" : "C"}</p>
         </div>
     )
 }
