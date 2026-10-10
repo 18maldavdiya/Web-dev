@@ -1,0 +1,14 @@
+.container{
+    border: 2px solid white;
+    height : 100px;
+    width : 400px;
+    border-radius : 10px;
+}
+.form{
+    display :flex;
+    justify-content :center;
+    align-items :center;
+}
+.btn-text{
+   margin-left :50px;
+}
