@@ -7,8 +7,8 @@ body {
 }
 
 .container {
-  width: 90%;
-  max-width: 550px;
+  width: 100%;
+  max-width: 1000px;
   margin: 60px auto;
   padding: 30px;
   background: #1e293b;
@@ -99,21 +99,3 @@ h1 {
   background: #dc2626;
 }
 
-@media (max-width: 450px) {
-  .container {
-    padding: 18px;
-    margin-top: 30px;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  .todo-input {
-    flex-wrap: wrap;
-  }
-
-  .form-control {
-    width: 100%;
-  }
-}

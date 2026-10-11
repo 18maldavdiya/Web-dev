@@ -56,7 +56,9 @@ const Todo = () => {
                         </button>
                     </li>))}
                 </ul>
+                <h3>{tasks.filter((task) => task.done).length} task completed</h3>
             </div>
+            
 
         </div>
     )
